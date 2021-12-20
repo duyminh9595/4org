@@ -93,6 +93,16 @@ services:
       - ./:/etc/hyperledger/channel/
     networks:
       - test
+    extra_hosts:
+      - "orderer.example.com:104.197.116.180"
+      - "orderer2.example.com:104.197.116.180"
+      - "orderer3.example.com:104.197.116.180"
+      - "peer0.org1.example.com:104.197.116.180"
+      - "peer1.org1.example.com:104.197.116.180"
+      - "peer0.org2.example.com:34.71.102.58"
+      - "peer1.org2.example.com:34.71.102.58"
+      - "peer0.org3.example.com:34.71.102.58"
+      - "peer1.org3.example.com:34.71.102.58"
 
   peer1.org1.example.com:
     container_name: peer1.org1.example.com
@@ -135,6 +145,16 @@ services:
       - ./:/etc/hyperledger/channel/
     networks:
       - test
+    extra_hosts:
+      - "orderer.example.com:104.197.116.180"
+      - "orderer2.example.com:104.197.116.180"
+      - "orderer3.example.com:104.197.116.180"
+      - "peer0.org1.example.com:104.197.116.180"
+      - "peer1.org1.example.com:104.197.116.180"
+      - "peer0.org2.example.com:34.71.102.58"
+      - "peer1.org2.example.com:34.71.102.58"
+      - "peer0.org3.example.com:34.71.102.58"
+      - "peer1.org3.example.com:34.71.102.58"
 
   cli:
     container_name: cli
